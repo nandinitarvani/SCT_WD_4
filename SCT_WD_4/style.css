@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#cfe8d5,#e6f4ec);
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 360px;
+    height: 640px;
+    background: white;
+    border-radius: 25px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+h2 {
+    color: #2f5d50;
+}
+
+.stats-card {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eaf6ef;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f3faf6;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.fab {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #4f8a75;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f0f7f3;
+    border-top: 1px solid #ddd;
+}
+
+.bottom-nav button {
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    background: #4f8a75;
+    color: white;
+    cursor: pointer;
+}
+
+.close {
+    background: gray !important;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sage To-Do App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Screens -->
+    <div class="screen active" id="homeScreen">
+        <h2>🌿 Stay Focused</h2>
+        <p id="quote"></p>
+
+        <div class="stats-card">
+            <div>Pending <span id="pendingCount">0</span></div>
+            <div>Completed <span id="completedCount">0</span></div>
+        </div>
+    </div>
+
+    <div class="screen" id="tasksScreen">
+        <h2>📝 Tasks</h2>
+        <ul id="taskList"></ul>
+    </div>
+
+    <div class="screen" id="profileScreen">
+        <h2>👤 Profile</h2>
+        <p>User Productivity Dashboard</p>
+        <p>Productivity Level: 🔥 Advanced</p>
+    </div>
+
+    <!-- Floating Add Button -->
+    <button class="fab" onclick="openModal()">+</button>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button onclick="showScreen('homeScreen')">Home</button>
+        <button onclick="showScreen('tasksScreen')">Tasks</button>
+        <button onclick="showScreen('profileScreen')">Profile</button>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="taskModal">
+    <div class="modal-content">
+        <h3>Add Task</h3>
+        <input type="text" id="taskInput" placeholder="Task title">
+        <input type="date" id="taskDate">
+        <input type="time" id="taskTime">
+        <input type="number" id="reminderValue" placeholder="Reminder value">
+<select id="reminderType">
+    <option value="minutes">Minutes Before</option>
+    <option value="hours">Hours Before</option>
+    <option value="days">Days Before</option>
+</select>
+        <button onclick="addTask()">Save Task</button>
+        <button class="close" onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
